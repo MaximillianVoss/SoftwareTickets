@@ -27,13 +27,13 @@
             <th>
                 Дата окончания разработки
             </th>
-            <th>
+@*            <th>
                 Действия
-            </th>
+            </th>*@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+@*        @foreach (var item in Model)
         {
             <tr>
                 <td>
@@ -57,12 +57,12 @@
                     <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Удалить</a>
                 </td>
             </tr>
-        }
+        }*@
     </tbody>
 </table>
 
 <div class="pagination">
-    <span>@Model.PageIndex of @Model.TotalPages</span>
+@*    <span>@Model.PageIndex of @Model.TotalPages</span>
     @if (Model.HasPreviousPage)
     {
         <a asp-action="Index" asp-route-pageNumber="@(Model.PageIndex - 1)" class="btn btn-outline-primary">Предыдущая</a>
@@ -70,5 +70,5 @@
     @if (Model.HasNextPage)
     {
         <a asp-action="Index" asp-route-pageNumber="@(Model.PageIndex + 1)" class="btn btn-secondary">Следующая</a>
-    }
+    }*@
 </div>
